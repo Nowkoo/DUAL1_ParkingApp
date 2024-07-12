@@ -19,14 +19,6 @@ public class Stay implements Serializable {
         return (int) miliseconds / (1000 * 60);
     }
 
-    public void setArrivalTime(Date arrivalTime) {
-        this.arrivalTime = arrivalTime;
-    }
-
-    public Date getArrivalTime() {
-        return arrivalTime;
-    }
-
     public Date getDepartureTime() {
         return departureTime;
     }

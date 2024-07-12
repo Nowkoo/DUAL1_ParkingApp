@@ -20,7 +20,7 @@ public class ResidentVehicle extends Vehicle {
     }
 
     public float calculateMonthlyImport() {
-        return minutesThisMonth * pricePerMinute;
+        return Math.round(minutesThisMonth * pricePerMinute);
     }
 
     public int getMinutesThisMonth() {

@@ -24,7 +24,8 @@ public class ReportGenerator {
             for (Vehicle currentVehicle : Data.getVehicles()) {
                 if (currentVehicle instanceof ResidentVehicle) {
                     ResidentVehicle vehicle = (ResidentVehicle) currentVehicle;
-                    f_out.printf("\n%-9s\t%-25d\t%-16f", currentVehicle.getLicensePlateNumber(), vehicle.getMinutesThisMonth(), vehicle.calculateMonthlyImport());
+                    String monthlyImport = DialogUtils.to2DecimalString(vehicle.calculateMonthlyImport()) + "€";
+                    f_out.printf("\n%-9s\t%-25d\t%-15s", currentVehicle.getLicensePlateNumber(), vehicle.getMinutesThisMonth(), monthlyImport);
                 }
             }
             f_out.close();
